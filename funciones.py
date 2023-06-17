@@ -1,7 +1,7 @@
 
 #Funciones básicas
 def saludar(nombre):
-    return (f'Hola, {nombre} desde l a función')
+    return (f'Hola, {nombre} desde la función')
 
 #def sumar(a=5, b=10):
 #    return a + b
