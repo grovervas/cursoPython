@@ -13,4 +13,4 @@ for fila in imagen:
             print('*', end='')
         else:
             print(' ', end='')
-    print('')
+    print(' ')
