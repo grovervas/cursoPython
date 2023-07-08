@@ -1,6 +1,7 @@
 from poo import Persona
 from player import Player
 from persona import Persona, Usuario, Empleado
+from practica import Cuadrado, Circulo, mostrarDatos
 
 """
 print(type(None))
@@ -52,10 +53,41 @@ per2.set_edad(32)
 
 print(f"Nombre: {per1.get_nombre()} edad: {per1.get_edad()}")
 print(f"Nombre: {per2.get_nombre()} edad: {per2.get_edad()}")
-"""
+
 persona = Persona('Grover', 40)
 usuario = Usuario('Ana', 30)
 empleado = Empleado('Laura', 25, 1500)
 
 usuario.getDatos()
 empleado.getDatos()
+"""
+
+def main():
+    
+    while True:
+        menu = """
+        Menú de Opciones
+        ================
+        Cálcule el área y perímetro de:
+        1. Cuadrado
+        2. Circulo
+        3. Salir  
+        
+        Ingrese la opción:  
+        """
+        opcion = input(menu)
+        
+        if opcion == '1':
+            lado = float(input('Ingrese el lado del cuadrado:'))
+            cuadrado = Cuadrado(lado)
+            mostrarDatos(cuadrado)
+        elif opcion == '2':
+            radio = float(input('Ingrese el radio del cirdulo:'))
+            circulo = Circulo(radio)
+            mostrarDatos(circulo)
+        elif opcion == '3':
+            break
+        else:
+            print('Opción incorrecta!!...')
+
+main()
